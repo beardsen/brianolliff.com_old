@@ -1,0 +1,6 @@
+[submodule "themes/bookworm"]
+	path = themes/bookworm
+	url = https://github.com/gethugothemes/bookworm.git
+[submodule "themes/tranquil"]
+	path = themes/tranquil
+	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
