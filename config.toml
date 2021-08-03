@@ -2,208 +2,201 @@ baseURL = "http://brianolliff.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 
-######################## default configuration ####################
-theme = "bookworm"
-# post pagination
-paginate = "5"
-# post excerpt
-summaryLength = "20"
-# google analytics
-googleAnalytics = "" # example : UA-123-45
-# disqus short name
-disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
+defaultContentLanguage = "en-us"
+theme = "tranquil"
+disqusShortname = "hugo-tranquilpeak-theme"
+# googleAnalytics = "UA-123-45"
+paginate = 7
+canonifyurls = true
 
-############################# Modules ##############################
-[module.hugoVersion]
-extended = true
-min = "0.80.0"
+[permalinks]
+  post = "/:year/:month/:slug/"
 
-############################# Outputs ##############################
-[outputs]
-home = ["HTML", "RSS", "JSON"]
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
 
-[markup.goldmark.renderer]
-unsafe= true
+[author]
+  name = "Brian Olliff"
+  bio = "Dungeons and Dragons DM, computer nerd, grower of beard"
+  job = "Your job title"
+  location = "US"
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  # gravatarEmail = "thibaud.lepretre@gmail.com"
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  # Your Twitter username without the @. E.g : thibaudlepretre
+  # twitter = "thibaudlepretre"
+  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
+  # googlePlus = "+ThibaudLepretre"
 
-
-############################## Plugins ##############################
-# CSS Plugins
-[[params.plugins.css]]
-link = "plugins/bootstrap/bootstrap.min.css"
-[[params.plugins.css]]
-link = "plugins/line-awesome/css/line-awesome.min.css"
-[[params.plugins.css]]
-link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
-
-# JS Plugins
-[[params.plugins.js]]
-link = "plugins/jquery/jquery.min.js"
-[[params.plugins.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
-[[params.plugins.js]]
-link = "plugins/instagram-feed/instagram-feed.js"
-[[params.plugins.js]]
-link = "plugins/search/fuse.min.js"
-[[params.plugins.js]]
-link = "plugins/search/mark.js"
-[[params.plugins.js]]
-link = "plugins/search/search.js"
-
-# site variables
-[params.variables]
-font_primary = "Mulish"
-h1 = "64px"
-h1_lg = "52px"
-h1_md = "42px"
-h2 = "38px"
-h2_md = "30px"
-h3 = "30px"
-h3_md = "24px"
-h4 = "24px"
-h5 = "18px"
-h6 = "16px"
-white = "#ffffff"
-black = "#000000"
-dark = "#152035"
-gray = "#747577"
-light = "#FAFAFA"
-color_primary = "#01AD9F"
-
-#################### default parameters ################################
-[params]
-logo = "images/logo.png"
-logo_height = "35px"
-favicon = "images/favicon.png"
-# Meta data
-description = "This is meta description"
-author = "Themefisher"
-# contact form action
-contact_form_action = "#" # contact form works with https://formspree.io
-# search
-search = true
-# main section
-mainSections = ["blog"]
-# copyright
-copyright = "Designed & Developed By [Gethugothemes](https://gethugothemes.com/)"
-
-# Preloader
-[params.preloader]
-enable = false
-preloader = "" # use jpg, png, svg or gif format.
-
-# Instagram feed
-[params.instafeed]
-enable = false
-instagram_user = "bookworm"
-access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
-
-# Subscription
-[params.subscription]
-enable = false
-# mailchimp subsciption
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
-title = "Subscribe for our monthly newsletter."
-input_placeholder = "Enter your email"
-
-# cookies
-[params.cookies]
-enable = false
-expire_days = 2
-
-
-############################# Main Menu ########################
+# Menu Configuration
 [[menu.main]]
-weight = 1
-url = "/"
-name = "Home"
-  
-[[menu.main]]
-weight = 3
-url = "about"
-name = "About"
-  
-[[menu.main]]
-weight = 4
-url = "contact"
-name = "Contact"
-
-[[menu.main]]
-weight = 5
-url = "#"
-name = "Pages"
-hasChildren = true
-
-  [[menu.main]]
-  parent = "Pages"
   weight = 1
-  url = "author/"
-  name = "Author"
-  
-  [[menu.main]]
-  parent = "Pages"
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+  url = "/"
+[[menu.main]]
   weight = 2
-  url = "tags/"
-  name = "Tags"
-  
-  [[menu.main]]
-  parent = "Pages"
+  identifier = "categories"
+  name = "Categories"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
+  url = "/categories"
+[[menu.main]]
   weight = 3
-  url = "categories/"
-  name = "Category"
-  
-  [[menu.main]]
-  parent = "Pages"
+  identifier = "tags"
+  name = "Tags"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
+  url = "/tags"
+[[menu.main]]
   weight = 4
-  url = "elements/"
-  name = "Elements"
-  
-  [[menu.main]]
-  parent = "Pages"
+  identifier = "archives"
+  name = "Archives"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
+  url = "/archives"
+[[menu.main]]
   weight = 5
-  url = "privacy/"
-  name = "Privacy"
-  
-  [[menu.main]]
-  parent = "Pages"
-  weight = 6
-  url = "terms-conditions/"
-  name = "Terms & Conditions"
+  identifier = "about"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
+  url = "/#about"
 
-############################# Footer Menu ########################
-[[menu.footer]]
-weight = 1
-url = "about/"
-name = "About"
+[[menu.links]]
+  weight = 1
+  identifier = "github"
+  name = "GitHub"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
+  url = "https://github.com/kakawait"
+[[menu.links]]
+  weight = 2
+  identifier = "stackoverflow"
+  name = "Stack Overflow"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
+  url = "https://stackoverflow.com/users/636472/kakawait"
 
-[[menu.footer]]
-weight = 2
-url = "author/"
-name = "Authors"
+[[menu.misc]]
+  weight = 1
+  identifier = "rss"
+  name = "RSS"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+  url = "/index.xml"
 
-[[menu.footer]]
-weight = 3
-url = "privacy/"
-name = "Privacy"
+[params]
+  # Customize date format use to render blog post date, categories and other
+  # You must use date format used by Go Time package https://golang.org/pkg/time/
+  # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
+  # Default format is: January 2, 2006
+  # dateFormat = "2 January 2006"
 
-[[menu.footer]]
-weight = 4
-url = "terms-conditions/"
-name = "Terms & Conditions"
+  # Global keywords configuration. Following keywords will be add to every pages
+  # keywords = ["development", "next-gen"]
 
-# Social Icons
-[[params.social]]
-url = "https://www.facebook.com/"
-icon = "la-facebook-f" # https://icons8.com/line-awesome
+  # Syntax highlighter, possible choice between: "highlight.js" (recommanded) and "prism.js" (experimental)
+  # You can comment it to disable syntax highlighting
+  syntaxHighlighter = "highlight.js"
 
-[[params.social]]
-url = "https://www.twitter.com/"
-icon = "lab la-twitter" # https://icons8.com/line-awesome
+  # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
+  clearReading = true
 
-[[params.social]]
-url = "https://www.instagram.com/"
-icon = "lab la-instagram" # https://icons8.com/line-awesome
+  # Define categories will create hierarchy between parents: `categories = ["foo", "bar"]` will consider "bar" a sub-category of "foo".
+  # If false it will flat categories.
+  hierarchicalCategories = true
 
-[[params.social]]
-url = "https://www.linkedin.com/"
-icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
+  description = "Hugo tranquilpeak theme demo"
+
+  # Customization
+  # Define the behavior of the sidebar
+  # 1: Display extra large sidebar on extra large screen, large sidebar on large screen,
+  #    medium sidebar on medium screen and header bar on small screen and
+  # extra large sidebar is swiped on extra large screen and large sidebar on all lower screen (default)
+  # 2: Display large sidebar on large screen, medium sidebar on medium screen and
+  #    header bar on small screen and large sidebar is swiped
+  # 3: Display medium sidebar on large and medium screen and header bar on small screen and
+  #    medium sidebar is swiped
+  # 4: Display header bar on all screens, extra large sidebar is swiped on extra large screen and
+  #    large sidebar is swiped on all lower screens
+  # 5: Display header bar on all screens and large sidebar is swiped on large screen
+  # 6: Display header bar on all screens and medium sidebar is swiped
+  sidebarBehavior = 1
+
+  # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
+  # There is many free CDN like Cloudinary or you can also use indirectly
+  # by using services like Google Photos.
+  # Current image is on AWS S3 and delivered by AWS CloudFront.
+  # Otherwise put your image, for example `cover.jpg` in folder `static/images/`,
+  # and use relative url : `images/cover.jpg`
+  coverImage = "images/cover.jpg"
+
+  # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
+  imageGallery = true
+
+  # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
+  thumbnailImage = true
+  # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
+  # Set this value to `right` if you have old posts to keep the old style on them
+  # and define `thumbnailImagePosition` on a post to overwrite this setting
+  thumbnailImagePosition = "bottom"
+  # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
+  # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
+  # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
+  autoThumbnailImage = true
+
+  # Your favicon path, default is "/favicon.png"
+  # favicon = "/favicon.png"
+
+  # Header configuration
+  # The link at the right of the header is customizable
+  # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
+  # By default, author's gravatar or author's picture is displayed.
+  #     url: /#search
+  #     icon: search
+  #     class: st-search-show-outputs
+
+  # Display `Next` on left side of the pagination, and `Prev` on right side one.
+  # If you set this value to `true`, these positions swap.
+  # swapPaginator = true
+
+  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+  # they have to be referred from static root. Example
+  # [[params.customCSS]]
+  #   href = "css/mystyle.css"
+
+  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
+  # they have to be referred from static root. Example
+  # [[params.customJS]]
+  #   src = "js/myscript.js"
+
+  # Sharing options
+  # Comment and uncomment to enable or disable sharing options
+  # If you wanna add a sharing option, read user documentation :
+  # Tranquilpeak configuration > Theme configuration > sharing-options
+  [[params.sharingOptions]]
+    name = "Facebook"
+    icon = "fa-facebook-official"
+    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
+
+  [[params.sharingOptions]]
+    name = "Twitter"
+    icon = "fa-twitter"
+    url = "https://twitter.com/intent/tweet?text=%s"
+
+  [[params.sharingOptions]]
+    name = "Google+"
+    icon = "fa-google-plus"
+    url = "https://plus.google.com/share?url=%s"
+
+  [params.header.rightLink]
+    class = ""
+    icon = ""
+    url = "/#about"
+
+  # Customize link of author avatar in sidebar
+  # [params.sidebar.profile]
+  #   url = "/#about"
+
+  # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
+  # [params.footer]
+  #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
