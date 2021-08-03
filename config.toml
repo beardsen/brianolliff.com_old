@@ -194,7 +194,7 @@ name = "Terms & Conditions"
 # Social Icons
 [[params.social]]
 url = "https://www.facebook.com/"
-icon = "lab la-facebook-f" # https://icons8.com/line-awesome
+icon = "la-facebook-f" # https://icons8.com/line-awesome
 
 [[params.social]]
 url = "https://www.twitter.com/"
