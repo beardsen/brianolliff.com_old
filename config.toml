@@ -2,8 +2,8 @@
 
 baseURL = "http://brianolliff.com/"
 languageCode = "en-us"
-title = "Timer | Responsive Multipurpose Bootstrap Hugo Template"
-theme = "timer-hugo"
+title = "Brian Olliff"
+theme = "timer"
 
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
@@ -17,21 +17,17 @@ name    = "About"
 url     = "about"
 weight  = 2
 [[menu.main]]
-name    = "Service"
-url     = "service"
-weight  = 3
-[[menu.main]]
 name    = "Gallery"
 url     = "gallery"
-weight  = 4
+weight  = 3
 [[menu.main]]
 name    = "Blog"
-url     = "blog"
-weight  = 5
+url     = "posts"
+weight  = 4
 [[menu.main]]
 name    = "Contact"
 url     = "contact"
-weight  = 6
+weight  = 5
 
 # Site Params
 [params]
@@ -50,12 +46,12 @@ contactFormAction = "#" # contact form works with https://formspree.io
 [params.banner]
 enable  = true
 bgImage = "images/slider.jpg"
-heading = "HI, MY NAME IS BRIAN & I AM A"
+heading = "Hi there.  I'm Brian and I'm a"
 description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
 # button
-btn     = true
-btnText = "Download More"
-btnURL  = "https://themefisher.com/"
+# btn     = true
+# btnText = "Download More"
+# btnURL  = "https://themefisher.com/"
 
 # flip text
 [[params.banner.flipText]]
@@ -88,13 +84,17 @@ subtitle= "Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque aucto
 
 # social icon
 [[params.socialIcon]]
-icon = "ion-social-facebook"
-url = "#"
+icon = "ion-social-twitter"
+url = "https://twitter.com/beardsengaming"
 
 [[params.socialIcon]]
-icon = "ion-social-instagram"
-url = "#"
+icon = "ion-social-youtube"
+url = "https://www.youtube.com/channel/UCTSO4xg2aIkKwILGBKOn37Q"
+
+[[params.socialIcon]]
+icon = "ion-social-twitch"
+url = "https://twitch.tv/beardsengaming"
 
 [[params.socialIcon]]
 icon = "ion-social-linkedin"
-url = "#"
+url = "https://www.linkedin.com/in/brianolliff/"
