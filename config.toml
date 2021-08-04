@@ -1,107 +1,100 @@
+# Timer Theme
+
 baseURL = "http://brianolliff.com/"
 languageCode = "en-us"
-title = "Brian Olliff"
+title = "Timer | Responsive Multipurpose Bootstrap Hugo Template"
+theme = "timer-hugo"
 
-defaultContentLanguage = "en-us"
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-googleAnalytics = ""
-preserveTaxonomyNames = true
-paginate = 5 #frontpage pagination
-hasCJKLanguage = true
+# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
-[outputs]
-home = ["HTML", "RSS", "Algolia"]
+# Navbar Menus
+[[menu.main]]
+name    = "Home"
+url     = "/"
+weight  = 1
+[[menu.main]]
+name    = "About"
+url     = "about"
+weight  = 2
+[[menu.main]]
+name    = "Service"
+url     = "service"
+weight  = 3
+[[menu.main]]
+name    = "Gallery"
+url     = "gallery"
+weight  = 4
+[[menu.main]]
+name    = "Blog"
+url     = "blog"
+weight  = 5
+[[menu.main]]
+name    = "Contact"
+url     = "contact"
+weight  = 6
 
+# Site Params
 [params]
-  header_image = "img/home-bg-jeep.jpg"
-  SEOTitle = "Brian Olliff Blog"
-  description = "Description, but now in English"
-  keyword = "i, have, no, keywords"
-  slogan = "Slogans are for losers"
+home = "Home"
+logo = "images/logo.png"
+dateFormat = "6 January 2006"
+# Meta data
+description = "Airspace Hugo theme"
+author = "Themefisher"
+# Google Analitycs
+googleAnalitycsID = "Your ID"
+# contact form action
+contactFormAction = "#" # contact form works with https://formspree.io
 
-  image_404 = "img/404-bg.jpg"
-  title_404 = "Not found"
-  omit_categories = false
+# Banner Section
+[params.banner]
+enable  = true
+bgImage = "images/slider.jpg"
+heading = "HI, MY NAME IS BRIAN & I AM A"
+description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
+# button
+btn     = true
+btnText = "Download More"
+btnURL  = "https://themefisher.com/"
 
-  # leancloud storage for page view counter
-  page_view_conter = false 
-  leancloud_app_id = ""
-  leancloud_app_key = ""
+# flip text
+[[params.banner.flipText]]
+title   = "SECURITY PRACTITIONER"
+[[params.banner.flipText]]
+title   = "GAMER"
+[[params.banner.flipText]]
+title   = "FATHER"
 
-  # algolia site search
-  algolia_search = true
-  algolia_appId = ""
-  algolia_indexName = ""
-  algolia_apiKey = ""
+# Homepage About Section
+[params.about]
+enable  = true
+title   = "ABOUT ME"
+content = "Hello, I’m a UI/UX Designer & Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only five centuries. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero."
+image   = "images/about/about.jpg"
 
-  # Sidebar settings
-  sidebar_about_description = "Cyber security practioner, Dungeons and Dragons DM, general computer nerd"
-  #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
-  sidebar_avatar = "img/zhaohuabing.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
+# Call to Action
+[params.cta]
+enable  = true
+title   = "SO WHAT YOU THINK ?"
+content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium."
+btnText = "Contact with me"
+btnURL  = "/contact"
 
-  featured_tags = true 
-  featured_condition_size = 1 
+# Portfolio Section On Homepage
+[params.portfolio]
+enable  = true
+title   = "Latest Works"
+subtitle= "Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus."
 
-  friends = true
-  bookmarks = false
-  about_me = true
+# social icon
+[[params.socialIcon]]
+icon = "ion-social-facebook"
+url = "#"
 
-  # Include any custom CSS and/or JS files, url or relative to /static folder
-  #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
-  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
+[[params.socialIcon]]
+icon = "ion-social-instagram"
+url = "#"
 
-  [params.social]
-  rss            = true 
-  email          = "brian@beardsen.com"
-  #facebook      = "full profile url in facebook"
-  #googleplus    = "full profile url in googleplus"
-  twitter       = "https://twitter.com/beardsengaming"
-  #linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
-  #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
-  #instagram     = "full profile url in instagram"
-  #github         = "https://github.com/yourgithub"
-  #wechat         = "your wechat qr code image"
-  #medium         = "full profile url in medium"
-  #pinterest     = "full profile url in pinterest"
-  #reddit        = "full profile url in reddit"
-  #gitlab        = "full profile url in gitlab"
-  #mastodon      = "full profile url in mastodon"
-  #keybase       = "full profile url in keybase"
-  #xing          = "https://www.xing.com/profile/yourxingid"
-  #git           = "full profile url for git user"
-  youtube        = "https://youtube.com"
-  twitch         = "https://twitch.tv/beardsengaming"
-  
-  [[params.friend_link]]
-  title = "No one"
-  href =  "https://google.com"
-
-  [[params.bookmark_link]]
-  title =  "Me"
-  href =  "https://www.beardsen.com"
-
-  
-  [[params.addtional_menus]]
-  title =  "BOOKS"
-  href =  "/top/books/"
-  [[params.addtional_menus]]
-  title =  "ABOUT"
-  href =  "/top/about/"
-
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
-[params.algolia]
-vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-params = ["categories", "tags"] 
-
-[markup]
-  [markup.tableOfContents]
-    endLevel = 2
-    startLevel = 1
-  [markup.highlight]
-    style = "dracula"
+[[params.socialIcon]]
+icon = "ion-social-linkedin"
+url = "#"
