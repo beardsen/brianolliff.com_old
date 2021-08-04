@@ -20,7 +20,7 @@ canonifyurls = true
 [author]
   name = "Brian Olliff"
   bio = "Dungeons and Dragons DM, computer nerd, grower of beard"
-  job = "Why do I need a job title?"
+  job = "Why do I need a job title??"
   location = "US"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "thibaud.lepretre@gmail.com"
