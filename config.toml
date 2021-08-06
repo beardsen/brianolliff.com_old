@@ -16,10 +16,10 @@ weight  = 1
 name    = "About"
 url     = "about"
 weight  = 2
-[[menu.main]]
-name    = "Gallery"
-url     = "gallery"
-weight  = 3
+# [[menu.main]]
+# name    = "Gallery"
+# url     = "gallery"
+# weight  = 3
 [[menu.main]]
 name    = "Blog"
 url     = "posts"
@@ -32,7 +32,7 @@ weight  = 5
 # Site Params
 [params]
 home = "Home"
-logo = "images/logo.png"
+logo = "images/brianolliff_website_logo.png"
 dateFormat = "6 January 2006"
 # Meta data
 description = "Airspace Hugo theme"
@@ -40,14 +40,14 @@ author = "Themefisher"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # contact form action
-contactFormAction = "#" # contact form works with https://formspree.io
+contactFormAction = "https://formspree.io/f/meqvrvjd" # contact form works with https://formspree.io
 
 # Banner Section
 [params.banner]
 enable  = true
 bgImage = "images/slider.jpg"
 heading = "Hi there.  I'm Brian and I'm a"
-description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGITAL DESIGN DIRECTOR, WEB DESIGNER AND DEVELOPER. THIS SITE SHOWCASES SOME OF MY WORK."
+description = "Over 15 years of IT/Cyber Security experience, an avid Sci-Fi fan, Dungeons & Dragons DM, content creator, and all around nerd.  Here is my stuff"
 # button
 # btn     = true
 # btnText = "Download More"
@@ -55,30 +55,32 @@ description = "WITH 10 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DIGI
 
 # flip text
 [[params.banner.flipText]]
-title   = "SECURITY PRACTITIONER"
+title   = "CREATOR"
+[[params.banner.flipText]]
+title   = "SECURITY PROFESSIONAL"
 [[params.banner.flipText]]
 title   = "GAMER"
 [[params.banner.flipText]]
-title   = "FATHER"
+title   = "D&D DM"
 
 # Homepage About Section
 [params.about]
 enable  = true
 title   = "ABOUT ME"
-content = "Hello, I’m a UI/UX Designer & Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only five centuries. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero."
+content = "Hi there, I'm Brian - an IT professional from the Southeast US.  I've been doing IT work in various forms for the past 15-20 years or so and am currently a Cyber Security Manager.<br> <br> When I'm not working, I'm either creating content for this site or YouTube, or working on various aspects of my D&D games, which are also streamed on Twitch.  Occasionally there's some camping thrown in there as well.  Oh, and I love scotch."
 image   = "images/about/about.jpg"
 
 # Call to Action
 [params.cta]
 enable  = true
-title   = "SO WHAT YOU THINK ?"
-content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium."
-btnText = "Contact with me"
+title   = "Would you like to know more?"
+content = "Come on, I know you got that reference, Rico.  <br><br>Well, even if you don't, click that button below to contact me and ask me anything!"
+btnText = "Contact me"
 btnURL  = "/contact"
 
 # Portfolio Section On Homepage
 [params.portfolio]
-enable  = true
+enable  = false
 title   = "Latest Works"
 subtitle= "Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus."
 
