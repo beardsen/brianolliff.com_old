@@ -35,8 +35,8 @@ home = "Home"
 logo = "images/brianolliff_website_logo.png"
 dateFormat = "6 January 2006"
 # Meta data
-description = "Airspace Hugo theme"
-author = "Themefisher"
+description = "Brian's collection of random ramblings, and the occasional picture or funny GIf/meme"
+author = "Brian Olliff"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # contact form action
