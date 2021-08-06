@@ -1,6 +1,6 @@
 # Timer Theme
 
-baseURL = "http://brianolliff.com/"
+baseURL = "https://brianolliff.com/"
 languageCode = "en-us"
 title = "Brian Olliff"
 theme = "timer"

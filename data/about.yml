@@ -1,7 +1,11 @@
 enable  : true
 title   : Who am I?
 description: >
-  So this is where I'll fill in more info about me.
+  Hi.  I'm Brian.  I've been working in the technology and IT field for quite a while now, but this is really my first attempt at a website for me to post things on.  Kinda the point of a website, right?  Currently, I'm a cyber security manager for a healthcare organization, and there is NEVER any shortage of work there.  
+  <br><br>
+  I'm also a D&D DM (and occasional player as well), I enjoy camping and always love a good book.  Why does this feel like a dating profile?  You can find my links to YouTube, Twitch, and Twitter below where I do all kinds of interesting gaming and D&D things.
+  <br><br>
+  <a href="https://twitter.com/beardsengaming" target=_new><ion-icon name="logo-twitter" size="large"></ion-icon></a>  <a href="https://twitch.tv/beardsengaming" target=_new><ion-icon name="logo-twitch" size="large"></ion-icon></a>  <a href="https://www.youtube.com/channel/UCTSO4xg2aIkKwILGBKOn37Q" target=_new><ion-icon name="logo-youtube" size="large"></ion-icon></a>
 image   : images/IMG_6592.jpg
 #aboutItem:
 #  - title : Why Choose Us
