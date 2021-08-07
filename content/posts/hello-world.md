@@ -2,6 +2,8 @@
 title: "Hello World"
 date: 2021-08-03T20:47:35-04:00
 draft: false
+Categories: [Welcome]
+Tags: [test]
 ---
 
 ## Yes, I started a blog.
